@@ -50,3 +50,8 @@
   padding: 0 15px;
   overflow-y: auto;
 }
+
+.contact-map {
+  width: 800px;
+  height: 600px;
+}
