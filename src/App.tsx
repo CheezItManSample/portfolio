@@ -9,22 +9,22 @@ const owner = 'Bozo the Clown'
 const avatarPic = 'http://placekitten.com/120/120';
 const menuLinks: LinkEntry[] = [
   {
-    icon: "bi-plus-circle",
+    icon: "bi bi-house-door",
     text: "Home",
     url: "#",
   },
   {
-    icon: "bi-plus-circle",
+    icon: "bi bi-info-square",
     text: "About",
     url: "#",
   },
   {
-    icon: "bi-plus-circle",
+    icon: "bi bi-sticky",
     text: "Portfolio",
     url: "#",
   },
   {
-    icon: "bi-plus-circle",
+    icon: "bi bi-mailbox",
     text: "Contact",
     url: "#",
   },
