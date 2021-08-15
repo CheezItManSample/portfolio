@@ -3,4 +3,27 @@
 .portfolio__main_menu {
     list-style-type: none;
     text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio__main_menu > ul > li {
+    position: relative;
+    white-space: nowrap;
+
+}
+
+.portfolio__main_menu a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 12px 15px;
+}
+
+.portfolio__main_menu a i {
+    margin-right: 8px;
+}
+
+.portfolio__main_menu .active {
+    color: #149ddd;
 }
