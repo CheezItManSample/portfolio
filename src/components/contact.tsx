@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, FormEvent } from 'react';
+import { MessageData } from '../types/message_data';
 import './contact.css';
 // import GoogleMapReact from 'google-map-react';
 
@@ -9,12 +10,13 @@ type ContactProps = {
     email: string,
     lat: number,
     lon: number,
-    city: string
-    state: string
+    city: string,
+    state: string,
+    onSendMsg: (msg: MessageData) => void,
 }
 
 
-const Contact: React.FC<ContactProps> = ({name, email, lat, lon, city, state}: ContactProps) => {
+const Contact: React.FC<ContactProps> = ({name, email, lat, lon, city, state, onSendMsg}: ContactProps) => {
     const [formData, setformData] = useState({
         name: '',
         email: '',
@@ -40,6 +42,17 @@ const Contact: React.FC<ContactProps> = ({name, email, lat, lon, city, state}: C
         setformData(newData);
     }
 
+    const onSubmit = (event: FormEvent) => {
+        event.preventDefault();
+        onSendMsg(formData);
+        setformData({
+            name: '',
+            email: '',
+            subject: '',
+            message: '',
+        });
+    }
+
     return (
         <article className="portfolio__contact container">
             <div className="row">
@@ -57,7 +70,7 @@ const Contact: React.FC<ContactProps> = ({name, email, lat, lon, city, state}: C
                     </section>
                 </div>
                 <section className="portfolio__contact__contact__form_block col-lg-6 col-md-6 d-flex shadow-lg p-3 mb-5 bg-white rounded">
-                    <form className="portfolio__contact__form container">
+                    <form className="portfolio__contact__form container" onSubmit={onSubmit}>
                     <div className="row d-flex">
                         <div className="form-group col-md-6 col-sm-12 p-2">
                             <label htmlFor="name">Your Name</label>
@@ -74,7 +87,7 @@ const Contact: React.FC<ContactProps> = ({name, email, lat, lon, city, state}: C
                             <div className="validate"></div>
                         </div>
                         <div className="form-group col-md-6 col-sm-12 p-2">
-                        <label htmlFor="name">Your Email</label>
+                        <label htmlFor="email">Your Email</label>
                         <input 
                             type="email" 
                             className="form-control" 
@@ -105,10 +118,11 @@ const Contact: React.FC<ContactProps> = ({name, email, lat, lon, city, state}: C
                     </div>
                     <div className="row col-medium-12 d-flex align-items-stretch">
                         <div className="form-group col-md-12">
-                            <label htmlFor="name">Message</label>
+                            <label htmlFor="message">Message</label>
                             <textarea 
                                 className="form-control" 
                                 name="message" 
+                                id="message"
                                 rows={10} 
                                 data-rule="required" 
                                 data-msg="Please write something for us"
@@ -121,7 +135,7 @@ const Contact: React.FC<ContactProps> = ({name, email, lat, lon, city, state}: C
                     </div>
                     <div className="form-row col-medium-12 d-flex align-items-stretch pt-5">
                         <div className="form-group col-md-12">
-                            <button onClick={() => {console.log('clicked')}} className="btn btn-primary btn-md">Send Email</button>
+                            <button onClick={onSubmit} className="btn btn-primary btn-md">Send Email</button>
                         </div>
                     </div>                                
                     </form>
