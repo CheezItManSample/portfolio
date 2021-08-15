@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 
 import Avatar from './components/avatar';
 import MainMenu, {LinkEntry} from './components/main_menu';
