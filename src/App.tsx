@@ -12,21 +12,25 @@ const menuLinks: LinkEntry[] = [
     icon: "bi bi-house-door",
     text: "Home",
     url: "#",
+    active: true,
   },
   {
     icon: "bi bi-info-square",
     text: "About",
     url: "#",
+    active: false,
   },
   {
     icon: "bi bi-sticky",
     text: "Portfolio",
     url: "#",
+    active: false,
   },
   {
     icon: "bi bi-mailbox",
     text: "Contact",
     url: "#",
+    active: false,
   },
 ]
 
