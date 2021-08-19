@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/CheezItManSample.github.io/portfolio/static/css/main.809471b8.chunk.css",
+    "main.js": "/CheezItManSample.github.io/portfolio/static/js/main.797fdecd.chunk.js",
+    "main.js.map": "/CheezItManSample.github.io/portfolio/static/js/main.797fdecd.chunk.js.map",
+    "runtime-main.js": "/CheezItManSample.github.io/portfolio/static/js/runtime-main.ffcb7ae3.js",
+    "runtime-main.js.map": "/CheezItManSample.github.io/portfolio/static/js/runtime-main.ffcb7ae3.js.map",
+    "static/js/2.f6798e52.chunk.js": "/CheezItManSample.github.io/portfolio/static/js/2.f6798e52.chunk.js",
+    "static/js/2.f6798e52.chunk.js.map": "/CheezItManSample.github.io/portfolio/static/js/2.f6798e52.chunk.js.map",
+    "static/js/3.75bbc83d.chunk.js": "/CheezItManSample.github.io/portfolio/static/js/3.75bbc83d.chunk.js",
+    "static/js/3.75bbc83d.chunk.js.map": "/CheezItManSample.github.io/portfolio/static/js/3.75bbc83d.chunk.js.map",
+    "index.html": "/CheezItManSample.github.io/portfolio/index.html",
+    "static/css/main.809471b8.chunk.css.map": "/CheezItManSample.github.io/portfolio/static/css/main.809471b8.chunk.css.map",
+    "static/js/2.f6798e52.chunk.js.LICENSE.txt": "/CheezItManSample.github.io/portfolio/static/js/2.f6798e52.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ffcb7ae3.js",
+    "static/js/2.f6798e52.chunk.js",
+    "static/css/main.809471b8.chunk.css",
+    "static/js/main.797fdecd.chunk.js"
+  ]
+}
