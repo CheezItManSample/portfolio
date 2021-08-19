@@ -1,9 +1,10 @@
-import './App.css';
+import './App.scss';
 
 import Avatar from './components/avatar';
 import MainMenu, {LinkEntry} from './components/main_menu';
 import Sidebar from './components/sidebar';
 import Contact from './components/contact';
+import { MessageData } from './types/message_data';
 
 const owner = 'Bozo the Clown'
 const avatarPic = 'http://placekitten.com/120/120';
@@ -32,6 +33,12 @@ const menuLinks: LinkEntry[] = [
 
 // lat: 41.8781, lng: -87.6298
 const App = () => {
+
+  const sendEmail = (msgData: MessageData) => {
+    console.log('Sending Email', msgData)
+
+  }
+
   return (
     <div className="App">
       <Sidebar>
@@ -48,6 +55,7 @@ const App = () => {
         lat={41.8781}
         city="Chicago"
         state="Il"
+        onSendMsg={sendEmail}
       />
     </div>
   );
