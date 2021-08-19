@@ -1,0 +1,22 @@
+name: "Build and Deploy"
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Install Yarn
+        run: |
+          npm install -g yarn
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.4
+      - name: Install and Test
+        run: |
+          yarn install
+          yarn test
+      - name: Deploy
+        run: |
+          yarn build
+          yarn deploy
